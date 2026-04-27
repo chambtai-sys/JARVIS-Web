@@ -1,0 +1,63 @@
+:root {
+    --jarvis-blue: #00d2ff;
+    --jarvis-blue-glow: rgba(0, 210, 255, 0.5);
+    --jarvis-bg: rgba(10, 10, 15, 0.9);
+    --jarvis-border: #00d2ff;
+}
+
+.jarvis-hud {
+    background: var(--jarvis-bg);
+    border: 2px solid var(--jarvis-border);
+    color: var(--jarvis-blue);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--jarvis-blue-glow);
+    backdrop-filter: blur(10px);
+}
+
+.jarvis-glow-text {
+    text-shadow: 0 0 10px var(--jarvis-blue-glow);
+}
+
+.jarvis-input {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid var(--jarvis-blue);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.jarvis-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--jarvis-blue);
+}
+
+.jarvis-button {
+    background: var(--jarvis-blue);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.jarvis-button:hover {
+    box-shadow: 0 0 15px var(--jarvis-blue);
+    transform: scale(1.05);
+}
+
+.jarvis-hex-grid {
+    background-image: 
+        linear-gradient(30deg, #00d2ff11 12%, transparent 12.5%, transparent 87%, #00d2ff11 87.5%, #00d2ff11),
+        linear-gradient(150deg, #00d2ff11 12%, transparent 12.5%, transparent 87%, #00d2ff11 87.5%, #00d2ff11),
+        linear-gradient(30deg, #00d2ff11 12%, transparent 12.5%, transparent 87%, #00d2ff11 87.5%, #00d2ff11),
+        linear-gradient(150deg, #00d2ff11 12%, transparent 12.5%, transparent 87%, #00d2ff11 87.5%, #00d2ff11),
+        linear-gradient(60deg, #00d2ff22 25%, transparent 25.5%, transparent 75%, #00d2ff22 75%, #00d2ff22),
+        linear-gradient(60deg, #00d2ff22 25%, transparent 25.5%, transparent 75%, #00d2ff22 75%, #00d2ff22);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
