@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "J.A.R.V.I.S for Web",
+  "version": "1.0.0",
+  "description": "Just A Rather Very Intelligent System for your browser. Integrated AI with MCP support.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "sidePanel"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles/jarvis.css"]
+    }
+  ],
+  "commands": {
+    "open_jarvis": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+J",
+        "mac": "Command+Shift+J"
+      },
+      "description": "Activate J.A.R.V.I.S"
+    }
+  },
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://api.anthropic.com/*"
+  ]
+}
